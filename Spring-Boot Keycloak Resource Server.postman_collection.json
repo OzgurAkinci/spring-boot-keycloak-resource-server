@@ -1,0 +1,193 @@
+{
+	"info": {
+		"_postman_id": "678599c2-90bf-49dd-9f66-5152dc43e27b",
+		"name": "Spring-Boot Keycloak Resource Server",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "9484512"
+	},
+	"item": [
+		{
+			"name": "GetToken Copy",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "grant_type",
+							"value": "password",
+							"type": "text"
+						},
+						{
+							"key": "client_id",
+							"value": "hy-client",
+							"type": "text"
+						},
+						{
+							"key": "username",
+							"value": "hy-user",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "hy-password",
+							"type": "text"
+						},
+						{
+							"key": "scope",
+							"value": "roles",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://185.255.93.36:8100/auth/realms/hy/protocol/openid-connect/token",
+					"protocol": "http",
+					"host": [
+						"185",
+						"255",
+						"93",
+						"36"
+					],
+					"port": "8100",
+					"path": [
+						"auth",
+						"realms",
+						"hy",
+						"protocol",
+						"openid-connect",
+						"token"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": "",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login Copy",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"hy-user\",\r\n    \"password\": \"hy-password\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://185.255.93.36:8080/api/user-service/auth/login",
+					"protocol": "http",
+					"host": [
+						"185",
+						"255",
+						"93",
+						"36"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"user-service",
+						"auth",
+						"login"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": "",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "refresh Copy",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"hy-user\",\r\n    \"password\": \"hy-password\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://185.255.93.36:8080/api/user-service/auth/login",
+					"protocol": "http",
+					"host": [
+						"185",
+						"255",
+						"93",
+						"36"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"user-service",
+						"auth",
+						"login"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": "",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Register Copy",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"hy-basic-user\",\r\n    \"password\": \"hy-basic-password\",\r\n    \"email\": \"hy-basic-user@hemenyanimda.com\",\r\n    \"firstname\": \"HY Basic User\",\r\n    \"lastname\": \"\",\r\n    \"enabled\": true\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://185.255.93.36:8080/api/user-service/auth/register",
+					"protocol": "http",
+					"host": [
+						"185",
+						"255",
+						"93",
+						"36"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"user-service",
+						"auth",
+						"register"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

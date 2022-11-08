@@ -1,0 +1,7 @@
+server:
+  port: 8080
+keycloak:
+  realm: test-realm
+  auth-server-url: http://localhost:8100/auth #keycloak auth server url
+  resource: test-client
+  bearer-only: true
