@@ -42,7 +42,7 @@
 					]
 				},
 				"url": {
-					"raw": "http://185.255.93.36:8100/auth/realms/hy/protocol/openid-connect/token",
+					"raw": "http://localhost:8100/auth/realms/hy/protocol/openid-connect/token",
 					"protocol": "http",
 					"host": [
 						"185",
@@ -85,7 +85,7 @@
 					}
 				},
 				"url": {
-					"raw": "http://185.255.93.36:8080/api/user-service/auth/login",
+					"raw": "http://localhost:8080/api/user-service/auth/login",
 					"protocol": "http",
 					"host": [
 						"185",
@@ -126,7 +126,7 @@
 					}
 				},
 				"url": {
-					"raw": "http://185.255.93.36:8080/api/user-service/auth/login",
+					"raw": "http://localhost:8080/api/user-service/auth/login",
 					"protocol": "http",
 					"host": [
 						"185",
@@ -170,7 +170,7 @@
 					}
 				},
 				"url": {
-					"raw": "http://185.255.93.36:8080/api/user-service/auth/register",
+					"raw": "http://localhost:8080/api/user-service/auth/register",
 					"protocol": "http",
 					"host": [
 						"185",
